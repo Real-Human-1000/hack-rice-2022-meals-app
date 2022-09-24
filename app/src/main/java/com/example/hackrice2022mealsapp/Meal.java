@@ -7,13 +7,13 @@ public class Meal implements Serializable {
     private String title;
     private int rating;
     private String description;
-    private int icon;
+    private int icon;  // An int representing which icon image. Maybe this should be a string...
 
     public Meal(String title, int rating, String description, int icon) {
         this.title = title;
         this.rating = rating;
         this.description = description;
-        this.icon = icon;  // An int representing which icon image. Maybe this should be a string...
+        this.icon = icon;
     }
 
     public String getTitle() {
