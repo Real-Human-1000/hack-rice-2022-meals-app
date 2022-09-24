@@ -28,7 +28,11 @@ public class MainActivity extends AppCompatActivity {
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            String text = new String(buffer);
+            String text = new String();
+            int i = 0;
+    //        while (buffer[i] != ' '){
+
+    //        }
             items.add(new Meal(text, 4, text, R.drawable.bricks));
         } catch (IOException ex){
             ex.printStackTrace();
