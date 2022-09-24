@@ -30,17 +30,37 @@ public class MainActivity extends AppCompatActivity {
             is.read(buffer);
             is.close();
             int a = 0;
-            while (buffer[a] != ','){
+            while (buffer[a] != ' '){
                 a++;
             }
             byte[] title = new byte[a+1];
             int b = 0;
-            while (b < a){
+            while (b <= a){
                 title[b] = buffer[b];
                 b++;
             }
-            String text = new String(title);
-            items.add(new Meal(text.toString(), text.toString(), text.toString(), text.toString(),5, R.drawable.bricks));
+            String title1 = new String(title);
+
+
+
+
+
+            int c = b + 1;
+            while(buffer[c] != ','){
+                c++;
+                Log.d("TAG", "d");
+            }
+            byte[] description = new byte[c-b+2];
+            int d = b+1;
+            while ( d <= c){
+                title[d] = buffer[d];
+                d++;
+            }
+            String description1 = new String(description);
+
+
+
+            items.add(new Meal(title1.toString(), title1.toString(), title1.toString(), title1.toString(),5, R.drawable.bricks));
         } catch (IOException ex){
             ex.printStackTrace();
         }
