@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,12 +29,18 @@ public class MainActivity extends AppCompatActivity {
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            String text = new String();
-            int i = 0;
-    //        while (buffer[i] != ' '){
-
-    //        }
-            items.add(new Meal(text, 4, text, R.drawable.bricks));
+            int a = 0;
+            while (buffer[a] != ','){
+                a++;
+            }
+            byte[] title = new byte[a+1];
+            int b = 0;
+            while (b < a){
+                title[b] = buffer[b];
+                b++;
+            }
+            String text = new String(title);
+            items.add(new Meal(text.toString(), text.toString(), text.toString(), text.toString(),5, R.drawable.bricks));
         } catch (IOException ex){
             ex.printStackTrace();
         }
