@@ -28,9 +28,8 @@ public class MealViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void onClick() {
-        Log.d("test", "clicked " + meal.getTitle());
         Intent i = new Intent(context, MealActivity.class);
-        i.putExtra("item", meal);
+        i.putExtra("MEAL", meal);
         context.startActivity(i);
     }
 }
