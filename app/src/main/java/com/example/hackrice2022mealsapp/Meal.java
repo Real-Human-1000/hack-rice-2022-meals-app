@@ -4,16 +4,33 @@ import java.io.Serializable;
 
 public class Meal implements Serializable {
 
-    private String title;
+    private String title, description, ingredients, recipe;
     private int rating;
-    private String description;
     private int icon;  // An int representing which icon image. Maybe this should be a string...
 
-    public Meal(String title, int rating, String description, int icon) {
+    public Meal(String title, String description, String ingredients, String recipe, int rating, int icon) {
         this.title = title;
         this.rating = rating;
         this.description = description;
+        this.ingredients = ingredients;
+        this.recipe = recipe;
         this.icon = icon;
+    }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public String getRecipe() {
+        return recipe;
+    }
+
+    public void setRecipe(String recipe) {
+        this.recipe = recipe;
     }
 
     public String getTitle() {

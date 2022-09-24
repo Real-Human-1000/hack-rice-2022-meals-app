@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Build the list of meals. This is where a file could be read
         List<Meal> items = new ArrayList<Meal>();
-        items.add(new Meal("Sandwich", 4, "Meat and bread", R.drawable.bricks));
-        items.add(new Meal("Dog Food", 1, "When the situation is really dire", R.drawable.bricks));
-        items.add(new Meal("Cake", 5, "Not a lie", R.drawable.bricks));
-        items.add(new Meal("Pizza", 4, "It's pizza", R.drawable.bricks));
+        items.add(new Meal("Sandwich", "Meat and bread", "Ham\nCheese\nBread", "Put together", 4, R.drawable.bricks));
+        items.add(new Meal("Dog Food",  "For when the situation is really dire", "Dog Food Can", "Open dog food can\nconsume", 1, R.drawable.bricks));
+        items.add(new Meal("Cake",  "Not a lie", "Three Buckets of Milk\nThree Wheat\nOne Egg\nTwo Piles of Sugar", "Combine", 5, R.drawable.bricks));
+        items.add(new Meal("Pizza",  "It's pizza", "Pizza", "Pizza",4, R.drawable.bricks));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MealAdapter(this, items));  // getApplicationContext() replaced with 'this'
