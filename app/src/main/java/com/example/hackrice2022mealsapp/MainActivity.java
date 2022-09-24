@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             int c = b + 1;
-            while(buffer[c] != ','){
+            while(buffer[c] != ' '){
                 c++;
                 Log.d("TAG", "d");
             }
