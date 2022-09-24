@@ -22,17 +22,23 @@ public class MainActivity extends AppCompatActivity {
         // Build the list of meals. This is where a file could be read
         List<Meal> items = new ArrayList<Meal>();
 
-
-        try {
-            File file = new File("Food_List");
-            BufferedReader br = new BufferedReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        try{
+            InputStream is = getAssets().open("Food_List");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            String text = new String(buffer);
+            items.add(new Meal(text, 4, text, R.drawable.bricks));
+        } catch (IOException ex){
+            ex.printStackTrace();
         }
-        items.add(new Meal("Sandwich", 4, "Meat and bread", R.drawable.bricks));
-        items.add(new Meal("Dog Food", 1, "When the situation is really dire", R.drawable.bricks));
-        items.add(new Meal("Cake", 5, "Not a lie", R.drawable.bricks));
-        items.add(new Meal("Pizza", 4, "It's pizza", R.drawable.bricks));
+
+
+
+//        items.add(new Meal("Dog Food", 1, "When the situation is really dire", R.drawable.bricks));
+//        items.add(new Meal("Cake", 5, "Not a lie", R.drawable.bricks));
+//        items.add(new Meal("Pizza", 4, "It's pizza", R.drawable.bricks));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MealAdapter(this, items));  // getApplicationContext() replaced with 'this'
