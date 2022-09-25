@@ -9,11 +9,12 @@
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="320dp"
-        android:layout_height="64dp"
+        android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
         android:textSize="32dp"
         android:text="TextView"
+        android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,31 +23,60 @@
         android:id="@+id/textViewDescription"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="32dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/ingredientsHeader"
+        android:text="Ingredients"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_width="320dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/textViewIngredients"
         android:layout_width="320dp"
         android:layout_height="192dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
         android:text="TextView"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/ingredientsHeader"
+        />
+
+    <TextView
+        android:id="@+id/recipeHeader"
+        android:text="Instructions"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_width="320dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/textViewRecipe"
         android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="384dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
         android:text="TextView"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/recipeHeader" />
 </androidx.constraintlayout.widget.ConstraintLayout>
