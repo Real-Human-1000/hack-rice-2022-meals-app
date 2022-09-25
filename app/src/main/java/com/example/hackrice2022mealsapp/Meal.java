@@ -6,7 +6,7 @@ public class Meal implements Serializable {
 
     private String title, description, ingredients, recipe;
     private int rating;
-    private int icon;  // An int representing which icon image. Maybe this should be a string...
+    private int icon;
 
     public Meal(String title, String description, String ingredients, String recipe, int rating, int icon) {
         this.title = title;
