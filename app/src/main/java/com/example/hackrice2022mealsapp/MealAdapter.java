@@ -44,19 +44,19 @@ public class MealAdapter extends RecyclerView.Adapter<MealViewHolder> {
         holder.meal = meal;
 
         switch (meal.getType()) {
-            case ("PASTA"):
+            case ("Pasta"):
                 holder.imageView.setImageResource(R.drawable.pasta);
                 break;
-            case ("SALAD"):
+            case ("Salad"):
                 holder.imageView.setImageResource(R.drawable.carrot);
                 break;
-            case ("DESSERT"):
+            case ("Dessert"):
                 holder.imageView.setImageResource(R.drawable.icecream);
                 break;
-            case ("MEAT"):
+            case ("Meat"):
                 holder.imageView.setImageResource(R.drawable.meat);
                 break;
-            case ("SOUP"):
+            case ("Soup"):
                 holder.imageView.setImageResource(R.drawable.soup);
                 break;
             default:

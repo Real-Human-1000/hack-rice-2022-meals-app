@@ -25,7 +25,7 @@ public class ListActivity extends AppCompatActivity {
         List<Meal> items = new ArrayList<Meal>();
 
         try{
-            InputStream is = getAssets().open("scraped_meals_2.txt");
+            InputStream is = getAssets().open("scraped_meals_3.txt");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -38,8 +38,8 @@ public class ListActivity extends AppCompatActivity {
             }
             int i = 0;
             while (i < parts.length) {
-                items.add(new Meal(parts[i], parts[i+1], parts[i+2], parts[i+3], "Misc", 5));
-                i = i + 4;
+                items.add(new Meal(parts[i], parts[i+1], parts[i+2], parts[i+3], parts[i+4], 5));
+                i = i + 5;
             }
         } catch (IOException ex){
             ex.printStackTrace();

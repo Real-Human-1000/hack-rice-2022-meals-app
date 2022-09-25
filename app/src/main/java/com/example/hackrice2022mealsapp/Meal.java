@@ -7,13 +7,13 @@ public class Meal implements Serializable {
     private String title, description, ingredients, recipe, type;
     private int rating;
 
-    public Meal(String title, String description, String ingredients, String recipe, String type, int rating) {
+    public Meal(String title, String type, String description, String ingredients, String recipe, int rating) {
         this.title = title;
+        this.type = type;
         this.rating = rating;
         this.description = description;
         this.ingredients = ingredients;
         this.recipe = recipe;
-        this.type = type;
     }
 
     public String getIngredients() {
