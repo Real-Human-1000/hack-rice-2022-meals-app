@@ -31,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
             is.close();
 
             String text = new String(buffer);
-            String[] parts = text.split(",");
+            String[] parts = text.split("~");
+            for (int part_idx = 0; part_idx < parts.length; part_idx++) {
+                parts[part_idx] = parts[part_idx].trim();
+            }
             int i = 0;
             while (i < parts.length) {
                 items.add(new Meal(parts[i], parts[i+1], parts[i+2], parts[i+3], 5, R.drawable.bricks));

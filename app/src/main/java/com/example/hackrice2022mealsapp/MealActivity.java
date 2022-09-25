@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -30,8 +31,12 @@ public class MealActivity extends AppCompatActivity {
         Meal meal = (Meal) i.getSerializableExtra("MEAL");
         textViewTitle.setText(meal.getTitle());
         textViewDescription.setText(meal.getDescription());
-        textViewIngredients.setText(meal.getIngredients());
-        textViewRecipe.setText(meal.getRecipe());
+        String[] separated_ingredients = meal.getIngredients().split("`");
+        textViewIngredients.setText(String.join("\n", separated_ingredients));
+        String[] separated_instuctions = meal.getRecipe().split("`");
+        textViewRecipe.setText(String.join("\n", separated_instuctions));
+
+        Log.d("Object Meal:", meal.getIngredients());
 
     }
 
