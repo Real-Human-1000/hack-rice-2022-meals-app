@@ -31,9 +31,9 @@ public class MealActivity extends AppCompatActivity {
         Meal meal = (Meal) i.getSerializableExtra("MEAL");
         textViewTitle.setText(meal.getTitle());
         textViewDescription.setText(meal.getDescription());
-        String[] separated_ingredients = meal.getIngredients().split("`");
+        String[] separated_ingredients = meal.getIngredients().split(",");
         textViewIngredients.setText(String.join("\n", separated_ingredients));
-        String[] separated_instuctions = meal.getRecipe().split("`");
+        String[] separated_instuctions = meal.getRecipe().split(",");
         textViewRecipe.setText(String.join("\n", separated_instuctions));
 
         Log.d("Object Meal:", meal.getIngredients());

@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +14,12 @@ import java.io.*;
 
 public class ListActivity extends AppCompatActivity {
 
+    MainActivity parentCtx;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
 
@@ -45,11 +49,11 @@ public class ListActivity extends AppCompatActivity {
 
 
 
-//        items.add(new Meal("Dog Food", 1, "When the situation is really dire", R.drawable.bricks));
-//        items.add(new Meal("Cake", 5, "Not a lie", R.drawable.bricks));
-//        items.add(new Meal("Pizza", 4, "It's pizza", R.drawable.bricks));
+//        items.add(new Meal("Dog Food","","", "When the situation is really dire", 1, R.drawable.bricks));
+//        items.add(new Meal("Cake","","", "Not a lie", 1, R.drawable.bricks));
+//        items.add(new Meal("Pizza","","", "It's pizza", 1, R.drawable.bricks));
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new MealAdapter(this, items));  // getApplicationContext() replaced with 'this'
+        recyclerView.setLayoutManager(new LinearLayoutManager((Context)this));
+        recyclerView.setAdapter(new MealAdapter((Context)this, items));  // getApplicationContext() replaced with 'this'
     }
 }
