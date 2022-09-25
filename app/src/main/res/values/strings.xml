@@ -2,4 +2,6 @@
     <string name="app_name">Hack Rice 2022 Meals App</string>
     <string name="list_button">Meal List</string>
     <string name="new_meal_button">Add Meal</string>
+    <string name="rate_button">Rate A Meal</string>
+    <string name="recommended_button">Meals For You</string>
 </resources>

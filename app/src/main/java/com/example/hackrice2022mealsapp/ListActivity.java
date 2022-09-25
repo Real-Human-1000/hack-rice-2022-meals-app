@@ -14,8 +14,6 @@ import java.io.*;
 
 public class ListActivity extends AppCompatActivity {
 
-    MainActivity parentCtx;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +25,7 @@ public class ListActivity extends AppCompatActivity {
         List<Meal> items = new ArrayList<Meal>();
 
         try{
-            InputStream is = getAssets().open("Food_List");
+            InputStream is = getAssets().open("scraped_meals_2.txt");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -47,7 +45,7 @@ public class ListActivity extends AppCompatActivity {
             ex.printStackTrace();
         }
 
-
+        Log.d("!!!!!!!!!!!!!!!",""+items.toArray().length);
 
 //        items.add(new Meal("Dog Food","","", "When the situation is really dire", 1, R.drawable.bricks));
 //        items.add(new Meal("Cake","","", "Not a lie", 1, R.drawable.bricks));

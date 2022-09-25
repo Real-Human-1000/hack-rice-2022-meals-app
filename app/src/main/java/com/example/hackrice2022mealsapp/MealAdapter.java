@@ -27,8 +27,18 @@ public class MealAdapter extends RecyclerView.Adapter<MealViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MealViewHolder holder, int position) {
-        holder.titleView.setText(meals.get(position).getTitle());
-        holder.descriptionView.setText(meals.get(position).getDescription());
+        if (meals.get(position).getTitle().length() >= 20) {
+            String truncated = meals.get(position).getTitle().substring(0,20) + "...";
+            holder.titleView.setText(truncated);
+        } else {
+            holder.titleView.setText(meals.get(position).getTitle());
+        }
+        if (meals.get(position).getDescription().length() >= 70) {
+            String truncated = meals.get(position).getDescription().substring(0,70) + "...";
+            holder.descriptionView.setText(truncated);
+        } else {
+            holder.descriptionView.setText(meals.get(position).getDescription());
+        }
         holder.imageView.setImageResource(meals.get(position).getIcon());
         holder.meal = meals.get(position);
     }

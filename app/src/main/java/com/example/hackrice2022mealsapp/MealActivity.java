@@ -36,8 +36,6 @@ public class MealActivity extends AppCompatActivity {
         String[] separated_instuctions = meal.getRecipe().split(",");
         textViewRecipe.setText(String.join("\n", separated_instuctions));
 
-        Log.d("Object Meal:", meal.getIngredients());
-
     }
 
 //    @Override
