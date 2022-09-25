@@ -20,7 +20,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".OpenActivity"
+            android:name=".MainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -29,13 +29,13 @@
         <activity
             android:name=".MealActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".ListActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
