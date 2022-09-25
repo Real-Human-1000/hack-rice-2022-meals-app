@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         titleTextView = findViewById(R.id.appTitleTextView);
         listButton = (Button)findViewById(R.id.listButton);
         listButton.setOnClickListener((v) -> onClickListButton());
-        newMealButton = (Button)findViewById(R.id.newMealButton);
-        newMealButton.setOnClickListener((v) -> onClickNewMealButton());
+//        newMealButton = (Button)findViewById(R.id.newMealButton);
+//        newMealButton.setOnClickListener((v) -> onClickNewMealButton());
 
-        recommendedButton = (Button)findViewById(R.id.recommendedButton);
-        recommendedButton.setOnClickListener((v) -> onClickRecommendedButton());
+//        recommendedButton = (Button)findViewById(R.id.recommendedButton);
+//        recommendedButton.setOnClickListener((v) -> onClickRecommendedButton());
 
     }
 
