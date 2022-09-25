@@ -1,0 +1,32 @@
+Intro
+	Team
+		Henry Prendergast - Python, Javascript, Java (Main development)
+		Arush Adabala - Python, Java (Main development)
+		Andrew Wolz - Python (Concept)
+	Track
+		First-timers
+	Purpose
+		Experience our first Hackathon
+	Technologies
+		Android Studio - Java
+		Pycharm - Python
+
+Demo
+	Meal list with over 30 meals
+	Individual Meal page with title, description, ingredients, instructions
+	Random discover feature
+	Appealing color palette and simple design
+
+Technical design and implementation
+	Meal scraper - separate python script used to gather recipes from allrecipes.com
+	Meal class - Holds all information about a meal, including title, description, category, ingredients, etc.
+	RecyclerView activities - Automatically convert list of Meals to a scrollable visual list with title, icons, and description
+	Icons sourced from creative commons sources and drawn using paint.net
+	
+Impact
+	Value
+		Simple design and convenience-focused meals
+		Ideal for college students living off-campus
+	Future 
+		Implement SQLite database to more efficiently load meals and to be able to sort by category
+		Recommendation feature: Tack user's preferences, time of day, location, etc. to recommend meals
