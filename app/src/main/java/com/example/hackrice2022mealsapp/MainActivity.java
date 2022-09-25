@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         items.add(new Meal("Dog Food","When the situation is really dire", "Dog food can", "Get human to open can", 1, R.drawable.chicken));
-        items.add(new Meal("Cake","Not a lie", "Three buckets of milk, three wheat, one egg, two sugar", "Combine ingredients in 3x3 crafting grid", 5, R.drawable.icecream));
-        items.add(new Meal("Pizza","It's pizza", "Pizza cheese, pizza dough, pizza red sauce, pizza toppings", "Mush all ingredients together and throw it into the ocean", 4, R.drawable.pizza));
+        items.add(new Meal("Cake","Not a lie", "Three buckets of milk\nThree wheat\nOne egg\nTwo sugar", "Combine ingredients in 3x3 crafting grid", 5, R.drawable.icecream));
+        items.add(new Meal("Pizza","It's pizza", "Pizza cheese\nPizza dough\nPizza red sauce\nPizza toppings", "Mush all ingredients together into a big ball\nThrow it into the ocean", 4, R.drawable.pizza));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MealAdapter(this, items));  // getApplicationContext() replaced with 'this'

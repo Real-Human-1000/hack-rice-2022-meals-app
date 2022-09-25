@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
+    android:background="@color/white"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:id="@+id/imageview"
         android:layout_marginEnd="10dp"
         android:layout_centerVertical="true"
@@ -18,9 +19,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/title"
         android:layout_toEndOf="@id/imageview"
+        android:layout_marginTop="10dp"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        tools:text="title"/>
+        android:textSize="24dp"
+        tools:text="Title"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -29,13 +31,14 @@
         android:layout_toEndOf="@id/imageview"
         android:layout_below="@id/title"
         android:textColor="@color/black"
-        tools:text="description@description.com"/>
+        android:textSize="16dp"
+        tools:text="description"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_below="@id/imageview"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:background="@color/black"/>
 
 </RelativeLayout>
