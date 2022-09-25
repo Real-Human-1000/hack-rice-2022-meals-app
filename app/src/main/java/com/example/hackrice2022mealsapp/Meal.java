@@ -4,17 +4,16 @@ import java.io.Serializable;
 
 public class Meal implements Serializable {
 
-    private String title, description, ingredients, recipe;
+    private String title, description, ingredients, recipe, type;
     private int rating;
-    private int icon;
 
-    public Meal(String title, String description, String ingredients, String recipe, int rating, int icon) {
+    public Meal(String title, String description, String ingredients, String recipe, String type, int rating) {
         this.title = title;
         this.rating = rating;
         this.description = description;
         this.ingredients = ingredients;
         this.recipe = recipe;
-        this.icon = icon;
+        this.type = type;
     }
 
     public String getIngredients() {
@@ -45,10 +44,6 @@ public class Meal implements Serializable {
         return rating;
     }
 
-    public int getIcon() {
-        return icon;
-    }
-
     public void setRating(int rating) {
         this.rating = rating;
     }
@@ -61,7 +56,11 @@ public class Meal implements Serializable {
         this.description = description;
     }
 
-    public void setIcon(int icon) {
-        this.icon = icon;
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

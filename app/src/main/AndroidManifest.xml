@@ -13,6 +13,14 @@
         android:theme="@style/Theme.HackRice2022MealsApp"
         tools:targetApi="31">
         <activity
+            android:name=".RecommendedActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".NewMeals"
             android:exported="false"
             android:parentActivityName=".MainActivity">
@@ -28,6 +36,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -44,7 +53,6 @@
             android:name=".ListActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -39,8 +39,30 @@ public class MealAdapter extends RecyclerView.Adapter<MealViewHolder> {
         } else {
             holder.descriptionView.setText(meals.get(position).getDescription());
         }
-        holder.imageView.setImageResource(meals.get(position).getIcon());
-        holder.meal = meals.get(position);
+
+        Meal meal = meals.get(position);
+        holder.meal = meal;
+
+        switch (meal.getType()) {
+            case ("PASTA"):
+                holder.imageView.setImageResource(R.drawable.pasta);
+                break;
+            case ("SALAD"):
+                holder.imageView.setImageResource(R.drawable.carrot);
+                break;
+            case ("DESSERT"):
+                holder.imageView.setImageResource(R.drawable.icecream);
+                break;
+            case ("MEAT"):
+                holder.imageView.setImageResource(R.drawable.meat);
+                break;
+            case ("SOUP"):
+                holder.imageView.setImageResource(R.drawable.soup);
+                break;
+            default:
+                holder.imageView.setImageResource(R.drawable.misc);
+        }
+
     }
 
     @Override

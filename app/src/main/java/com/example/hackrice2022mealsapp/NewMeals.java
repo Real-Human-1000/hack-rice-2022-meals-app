@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -31,17 +32,33 @@ public class NewMeals extends AppCompatActivity {
     private void writeToFile(String message)
     {
         try {
-            Log.d("asdf","asdf");
-            FileOutputStream fileout = openFileOutput("Food_List",MODE_PRIVATE);
+            Log.d("FILE","Writing to file");
+            FileOutputStream fileout = openFileOutput("testfile",MODE_PRIVATE);
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileout);
             outputStreamWriter.append(message);
             outputStreamWriter.close();
+            Log.d("FILE","Done Writing to File");
 
         } catch(FileNotFoundException e)
         {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        try{
+            Log.d("FILE", "Reading file");
+            InputStream is = new FileInputStream(new File("testfile"));
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            String text = new String(buffer);
+            Log.d("FILE", text);
+
+        } catch (IOException ex){
+            ex.printStackTrace();
         }
     }
 

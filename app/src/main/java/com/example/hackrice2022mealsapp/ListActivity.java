@@ -38,14 +38,12 @@ public class ListActivity extends AppCompatActivity {
             }
             int i = 0;
             while (i < parts.length) {
-                items.add(new Meal(parts[i], parts[i+1], parts[i+2], parts[i+3], 5, R.drawable.bricks));
+                items.add(new Meal(parts[i], parts[i+1], parts[i+2], parts[i+3], "Misc", 5));
                 i = i + 4;
             }
         } catch (IOException ex){
             ex.printStackTrace();
         }
-
-        Log.d("!!!!!!!!!!!!!!!",""+items.toArray().length);
 
 //        items.add(new Meal("Dog Food","","", "When the situation is really dire", 1, R.drawable.bricks));
 //        items.add(new Meal("Cake","","", "Not a lie", 1, R.drawable.bricks));

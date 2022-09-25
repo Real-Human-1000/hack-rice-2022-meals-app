@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView titleTextView;
-    Button listButton, newMealButton;
+    Button listButton, newMealButton, recommendedButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         newMealButton = (Button)findViewById(R.id.newMealButton);
         newMealButton.setOnClickListener((v) -> onClickNewMealButton());
 
+        recommendedButton = (Button)findViewById(R.id.recommendedButton);
+        recommendedButton.setOnClickListener((v) -> onClickRecommendedButton());
+
     }
 
     public void onClickListButton() {
@@ -32,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickNewMealButton() {
         Intent i = new Intent(this, NewMeals.class);
+        this.startActivity(i);
+    }
+
+    public void onClickRecommendedButton() {
+        Intent i = new Intent(this, RecommendedActivity.class);
         this.startActivity(i);
     }
 }
